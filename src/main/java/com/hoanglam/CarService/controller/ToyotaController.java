@@ -14,25 +14,25 @@ public class ToyotaController {
     @Autowired
     private ToyotaRepository toyotaRepository;
 
-    @PostMapping("/employees")
+    @PostMapping("/toyotas")
     public Toyota saveEmployee(@RequestBody Toyota toyota){
         toyotaRepository.saveEmployee(toyota);
         return toyota;
     }
 
-    @GetMapping("/employees")
+    @GetMapping("/toyotas")
     public List<Toyota> findAll(){
 
         return toyotaRepository.findAll();
     }
 
-    @PutMapping("/employee}")
+    @PutMapping("/toyotas")
     public void update(@RequestBody Toyota toyota){
 
         toyotaRepository.update(toyota);
     }
 
-    @DeleteMapping("/employees/{name}")
+    @DeleteMapping("/toyotas/{name}")
     public void delete(@PathVariable("name") String name){
 
         toyotaRepository.delete(name);

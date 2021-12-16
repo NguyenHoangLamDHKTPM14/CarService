@@ -14,4 +14,13 @@ public abstract class Car {
     public Description getDescription(){
         return description;
     }
+
+    public Car(String name, int price, Description description) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+    }
+
+    public Car() {
+    }
 }
